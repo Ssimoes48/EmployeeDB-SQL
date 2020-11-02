@@ -23,12 +23,43 @@ CREATE TABLE Departments (
 
 SELECT * FROM Departments
 
-CREATE TABLE Employee_Department (
-    Employee_ID INTEGER   NOT NULL,
+CREATE TABLE Managers (
     Department_ID VARCHAR(15)   NOT NULL,
-    CONSTRAINT pk_Employee_Department PRIMARY KEY (
+    Employee_ID INTEGER   NOT NULL,
+    CONSTRAINT pk_Managers PRIMARY KEY (
         Employee_ID
      )
 );
 
+SELECT * FROM Managers
+
+CREATE TABLE Employee_Department (
+    Employee_ID INTEGER   NOT NULL,
+    Department_ID VARCHAR(15)   NOT NULL
+    --CONSTRAINT pk_Employee_Department PRIMARY KEY (
+        --Employee_ID, Department_ID)
+     --)
+);
+
 SELECT * FROM Employee_Department
+
+CREATE TABLE Job_Title (
+    Title_ID VARCHAR(20)   NOT NULL,
+    Title VARCHAR(20)   NOT NULL,
+    CONSTRAINT pk_Job_Title PRIMARY KEY (
+        Title_ID
+     )
+);
+
+SELECT * FROM Job_Title
+
+CREATE TABLE Saleries (
+    Employee_ID INTEGER   NOT NULL,
+    Salary INTEGER   NOT NULL,
+    CONSTRAINT pk_Saleries PRIMARY KEY (
+        Employee_ID
+     )
+);
+
+SELECT * FROM Saleries
+
