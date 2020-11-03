@@ -53,7 +53,7 @@ CREATE TABLE Job_Title (
 
 SELECT * FROM Job_Title
 
-CREATE TABLE Saleries (
+CREATE TABLE Salaries (
     Employee_ID INTEGER   NOT NULL,
     Salary INTEGER   NOT NULL,
     CONSTRAINT pk_Saleries PRIMARY KEY (
@@ -61,7 +61,7 @@ CREATE TABLE Saleries (
      )
 );
 
-SELECT * FROM Saleries
+SELECT * FROM Salaries
 
 ALTER TABLE Employee ADD CONSTRAINT fk_Employee_Employee_ID FOREIGN KEY(Employee_ID)
 REFERENCES Saleries (Employee_ID);
@@ -77,3 +77,11 @@ REFERENCES Departments (Department_ID);
 
 ALTER TABLE Managers ADD CONSTRAINT fk_Managers_Department_ID FOREIGN KEY(Department_ID)
 REFERENCES Departments (Department_ID);
+
+SELECT e.Employee_ID, e.Last_Name, e.First_Name, e.Sex, s.Salary 
+FROM Employee e
+INNER JOIN Salaries s
+ON (e.Employee_ID = s.Employee_ID);
+
+
+
