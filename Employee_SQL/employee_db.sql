@@ -63,3 +63,17 @@ CREATE TABLE Saleries (
 
 SELECT * FROM Saleries
 
+ALTER TABLE Employee ADD CONSTRAINT fk_Employee_Employee_ID FOREIGN KEY(Employee_ID)
+REFERENCES Saleries (Employee_ID);
+
+ALTER TABLE Employee ADD CONSTRAINT fk_Employee_Employee_Title_ID FOREIGN KEY(Employee_Title_ID)
+REFERENCES Job_Title (Title_ID);
+
+ALTER TABLE Employee_Department ADD CONSTRAINT fk_Employee_Department_Employee_ID FOREIGN KEY(Employee_ID)
+REFERENCES Employee (Employee_ID);
+
+ALTER TABLE Employee_Department ADD CONSTRAINT fk_Employee_Department_Department_ID FOREIGN KEY(Department_ID)
+REFERENCES Departments (Department_ID);
+
+ALTER TABLE Managers ADD CONSTRAINT fk_Managers_Department_ID FOREIGN KEY(Department_ID)
+REFERENCES Departments (Department_ID);
