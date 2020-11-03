@@ -83,5 +83,17 @@ FROM Employee e
 INNER JOIN Salaries s
 ON (e.Employee_ID = s.Employee_ID);
 
+SELECT First_Name, Last_Name, Hire_Date
+FROM Employee
+WHERE Hire_Date LIKE '%1986%'
+
+SELECT d.Department_ID, d.Department_Name, e.Employee_ID, e.Last_Name, e.First_Name
+FROM Employee e
+INNER JOIN Managers m
+ON m.Employee_ID = e.Employee_ID
+INNER JOIN Departments d
+ON d.Department_ID = m.Department_ID
+
+
 
 
