@@ -16,6 +16,20 @@
 
 
 ## Data Modeling
+
+To visualize my data, I used an Entity Relational Database called [Quick Database Diagrams]( https://app.quickdatabasediagrams.com/#/) . First, I reviewed my 6 different `csv` files
+
+* [employees.csv](https://github.com/Ssimoes48/SQL_Challenge/blob/main/Employee_SQL/Resources/employees.csv)
+* [dept_emp.csv](https://github.com/Ssimoes48/SQL_Challenge/blob/main/Employee_SQL/Resources/dept_emp.csv)
+* [dept_manager.csv](https://github.com/Ssimoes48/SQL_Challenge/blob/main/Employee_SQL/Resources/dept_manager.csv)
+* [salaries.csv](https://github.com/Ssimoes48/SQL_Challenge/blob/main/Employee_SQL/Resources/salaries.csv)
+* [titles.csv](https://github.com/Ssimoes48/SQL_Challenge/blob/main/Employee_SQL/Resources/titles.csv)
+* [departments.csv](https://github.com/Ssimoes48/SQL_Challenge/blob/main/Employee_SQL/Resources/departments.csv)
+
+After reviewing the data, I was able to determine what columns would be Primary Keys for when comparing my data files. I then created tables for each `csv` file and included the details for the data going into each column. For example, numbers were assigned as `INTEGERS` and names and personal information were assigned as `VARCHAR` . 
+
+Once my tables were created in the mapping tool, I then linked the tables on Primary keys and other data relationships. I linked `employee_id` and other `id` information. 
+
 ![ERD Map](Images/ERD_map_update.PNG)
 
 ![ERD Code](Images/ERD_code_update.PNG)
