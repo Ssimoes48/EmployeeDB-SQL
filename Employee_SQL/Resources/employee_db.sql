@@ -78,15 +78,18 @@ REFERENCES Departments (Department_ID);
 ALTER TABLE Managers ADD CONSTRAINT fk_Managers_Department_ID FOREIGN KEY(Department_ID)
 REFERENCES Departments (Department_ID);
 
+--Question 1
 SELECT e.Employee_ID, e.Last_Name, e.First_Name, e.Sex, s.Salary 
 FROM Employee e
 INNER JOIN Salaries s
 ON (e.Employee_ID = s.Employee_ID);
 
+--Question 2
 SELECT First_Name, Last_Name, Hire_Date
 FROM Employee
 WHERE Hire_Date LIKE '%1986%'
 
+--Question 3
 SELECT d.Department_ID, d.Department_Name, e.Employee_ID, e.Last_Name, e.First_Name
 FROM Employee e
 INNER JOIN Managers m
@@ -94,6 +97,7 @@ ON m.Employee_ID = e.Employee_ID
 INNER JOIN Departments d
 ON d.Department_ID = m.Department_ID
 
+--Question 4
 SELECT e.Employee_ID, e.Last_Name, e.First_Name, d.Department_Name
 FROM Employee e
 INNER JOIN Employee_Department g
@@ -101,4 +105,26 @@ ON g.Employee_ID = e.Employee_ID
 INNER JOIN Departments d
 ON d.Department_ID = g.Department_ID
 
+--Question 5
+SELECT First_Name, Last_Name, Sex
+FROM Employee
+Where First_Name = 'Hercules' AND Last_Name LIKE '%B%'
+
+--Question 6
+SELECT e.Employee_ID, e.Last_Name, e.First_Name, d.Department_Name
+FROM Employee e
+INNER JOIN Employee_Department g
+ON g.Employee_ID = e.Employee_ID
+INNER JOIN Departments d
+ON d.Department_ID = g.Department_ID
+WHERE d.Department_Name = 'Sales'
+
+--Question 7
+SELECT e.Employee_ID, e.Last_Name, e.First_Name, d.Department_Name
+FROM Employee e
+INNER JOIN Employee_Department g
+ON g.Employee_ID = e.Employee_ID
+INNER JOIN Departments d
+ON d.Department_ID = g.Department_ID
+WHERE d.Department_Name = 'Sales' OR d.Department_Name = 'Development'
 
