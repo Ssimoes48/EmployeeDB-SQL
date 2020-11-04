@@ -97,10 +97,9 @@ BONUS
 
 ## Resources
 
-link to jupyter notebook
-link to sql
+Link to [Jupyter Notebook]( https://github.com/Ssimoes48/SQL_Challenge/blob/main/employee_db.ipynb)
 
-see documentation [here](myLib/README.md)
+Link to [SQL Employee Database](https://github.com/Ssimoes48/SQL_Challenge/blob/main/Employee_SQL/employee_db.sql)
 
 ## Contact
 Sara Simoes
