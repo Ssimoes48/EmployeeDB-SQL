@@ -128,3 +128,11 @@ INNER JOIN Departments d
 ON d.Department_ID = g.Department_ID
 WHERE d.Department_Name = 'Sales' OR d.Department_Name = 'Development'
 
+--Question 8
+SELECT Last_Name, COUNT(Last_Name) AS "Frequency"
+FROM Employee
+GROUP BY Last_Name
+ORDER BY Last_Name DESC
+
+
+
