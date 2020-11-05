@@ -14,6 +14,7 @@
 
 ## About the Project
 
+As a recent employee at Pewlett Hackard, I have been tasked to organize and analyze data on employees at the corporation in the 1980s and 1990s. I have used a Database mapping tool to visualize all of the data and then PostgreSQL to analyze this information. Below you will see a step by step guide to how the information was modeled and reviewed. 
 
 ## Data Modeling
 
