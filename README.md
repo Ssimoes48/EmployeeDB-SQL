@@ -87,6 +87,8 @@ Data Output:
 
 2. List first name, last name, and hire date for employees who were hired in 1986.
 
+Query: To show this view, I used a `WHERE` function to only show Employees who were hired in the year 1986 - `WHERE hire_data LIKE ‘%1986%’ ` . If you put the search value in `’% %’` it searches similarly to ‘contains’. 
+
 ![Question 2](Images/question2.PNG)
 
 Data Output: 
@@ -94,6 +96,8 @@ Data Output:
 ![Question Data 2](Images/question2_data.PNG)
 
 3. List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
+
+Query: To display this view, I had to `INNER JOIN` 3 different data tables- `Employee` , `Managers` , and `Departments` . I joined the `Manager` and `Employee` tables on `Employee_ID` . I joined the `Managers` and `Departments` on `Department_ID` . 
 
 ![Question 3](Images/question3.PNG)
 
@@ -103,6 +107,8 @@ Data Output:
 
 4. List the department of each employee with the following information: employee number, last name, first name, and department name.
 
+Query: This view is similar to the view in question 3 accept the `INNER JOIN` is on the `Employee` , Employee_Department` and `Department` tables instead of `Manager` departments. I also joined the tables on `Employee_ID` and `Department_ID` . 
+
 ![Question 4](Images/question4.PNG)
 
 Data Output: 
@@ -110,6 +116,8 @@ Data Output:
 ![Question Data 4](Images/question4_data.PNG)
 
 5. List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
+
+Query: To show this view, I used a `WHERE` statement with 2 criteria- `WHERE` the `First_Name` is equal to `’Hercules’` and `WHERE` the `Last_Name` starts with the letter `’%B%”` . 
 
 ![Question 5](Images/question5.PNG)
 
@@ -119,6 +127,8 @@ Data Output:
 
 6. List all employees in the Sales department, including their employee number, last name, first name, and department name.
 
+Query: To show this view, I had to use `INNER JOIN` 3 tables- `Employee` , `Employee_Department` , and `Department`. This is how the view is able to display the Employee information as well as the `Department_Name` . I also used a `WHERE` statement to only show Employee’s who are in the `Sales` department. 
+
 ![Question 6](Images/question6.PNG)
 
 Data Output: 
@@ -127,6 +137,8 @@ Data Output:
 
 7. List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
 
+Query: This view is similar to the view in the above question accept in the `WHERE` statement, there are 2 criteria- the `Department ` is equal to `Sales`  `OR`  `Development` . 
+
 ![Question Data 7](Images/question7_data.PNG)
 
 Data Output: 
@@ -134,6 +146,8 @@ Data Output:
 ![Question Data 7](Images/question7_data.PNG)
 
 8. In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
+
+Query: To show this view, I used a `COUNT` function to count the number of times a `Last_Name` was shared by employees. I labeled this new count as ‘Frequency’ to appear as a new Column in the Data Output. To count the ‘like’ `Last_Names` , I used a `GROUP BY` function to group the same `Last_Name`. Then I sorted the data in descending order by using an `ORDER BY` command. 
 
 ![Question 8](Images/question8.PNG)
 
