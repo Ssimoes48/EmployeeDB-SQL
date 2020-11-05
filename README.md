@@ -39,7 +39,7 @@ Below is what the code looks like in the data mapping tool. Once I completed org
 
 ## Data Engineering
 
-After exporting the [schemata](https://github.com/Ssimoes48/SQL_Challenge/blob/main/Employee_SQL/ERDexport.sql) from the data mapping tool, I used the code to create my tables in `pgAdmin4` . The code exported with `" "` around the variables, so I deleted them when transferring the information to easier manipulate the information later. 
+After exporting the [schemata](https://github.com/Ssimoes48/SQL_Challenge/blob/main/Employee_SQL/ERDexport.sql) from the data mapping tool, I used the code to create my tables in `pgAdmin4` . The code exported with `" "` around the variables, so I deleted the `quotes` when transferring the code to easier manipulate the data later. 
 
 The code includes the `CREATE TABLE` command and then includes one line per column of data. Each column has `syntax` for the type of data included in the cells and the command `NOT NULL` to only include cells with information included and not blank cells. The end `syntax` refers to the `Primary Key` which I set to be the `Employee_ID` .
 
