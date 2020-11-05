@@ -32,22 +32,42 @@ Once my tables were created in the mapping tool, I then linked the tables on Pri
 
 ![ERD Map](Images/ERD_map_update.PNG)
 
+Below is what the code looks like in the data mapping tool. Once I completed organizing the data, I exported this into a file to use in `PostgreSQL` . 
+
 ![ERD Code](Images/ERD_code_update.PNG)
 
 
 ## Data Engineering
 
+After exporting the [schemata](https://github.com/Ssimoes48/SQL_Challenge/blob/main/Employee_SQL/ERDexport.sql) from the data mapping tool, I used the code to create my tables in `pgAdmin4` . The code exported with `” “` around the variables, so I deleted them when transferring the information to easier manipulate the information later. 
+
+The code includes the `CREATE TABLE` command and then includes one line per column of data. Each column has `syntax` for the type of data included in the cells and the command `NOT NULL` to only include cells with information included and not blank cells. The end `syntax` refers to the `Primary Key` which I set to be the `Employee_ID` .
+
+Employee Table: 
+
 ![Employee Table](Images/employee_table.PNG)
+
+Department Table: includes `Department_ID` and `Department_Name`
 
 ![department Table](Images/department_table.PNG)
 
+Department Manager Table: includes `Department_ID` and manager `Employee_ID` 
+
 ![manager Table](Images/manager_table.PNG)
+
+Employee Department Table: includes `Employee_ID` and `Department_ID` 
 
 ![Employee department Table](Images/employee_department.PNG)
 
+Job Title Table: includes `Title_ID` and `Title`
+
 ![Job Title Table](Images/job_title_table.PNG)
 
+Salary Table: includes `Employee_ID` and `Salary` amount
+
 ![SalaryTable](Images/salary_table.PNG)
+
+By mapping my data tables in the mapping tool, I created `CONSTRAINTS` ,  `PRIMARY KEYS` , and `FOREIGN KEYS` . These criteria help my data tables interact when combining information into one `queries` . 
 
 ![Table Constraints](Images/constraints.PNG)
 
@@ -57,7 +77,11 @@ Once my tables were created in the mapping tool, I then linked the tables on Pri
 
 1. List the following details of each employee: employee number, last name, first name, sex, and salary.
 
+Query : To show this view, I used an `INNER JOIN` on the `Employee` and `Salaries` tables. I `joined` the data on the `Employee_ID` . 
+
 ![Question 1](Images/question1.PNG)
+
+Data Output: 
 
 ![Question Data 1](Images/question1_data.PNG)
 
@@ -65,11 +89,15 @@ Once my tables were created in the mapping tool, I then linked the tables on Pri
 
 ![Question 2](Images/question2.PNG)
 
+Data Output: 
+
 ![Question Data 2](Images/question2_data.PNG)
 
 3. List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
 
 ![Question 3](Images/question3.PNG)
+
+Data Output: 
 
 ![Question Data 3](Images/question3_data.PNG)
 
@@ -77,11 +105,15 @@ Once my tables were created in the mapping tool, I then linked the tables on Pri
 
 ![Question 4](Images/question4.PNG)
 
+Data Output: 
+
 ![Question Data 4](Images/question4_data.PNG)
 
 5. List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
 
 ![Question 5](Images/question5.PNG)
+
+Data Output: 
 
 ![Question Data 5](Images/question5_data.PNG)
 
@@ -89,15 +121,23 @@ Once my tables were created in the mapping tool, I then linked the tables on Pri
 
 ![Question 6](Images/question6.PNG)
 
+Data Output: 
+
 ![Question Data 6](Images/question6_data.PNG) ![Question 7](Images/question7.PNG)
 
 7. List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
 
 ![Question Data 7](Images/question7_data.PNG)
 
+Data Output: 
+
+![Question Data 7](Images/question7_data.PNG)
+
 8. In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
 
 ![Question 8](Images/question8.PNG)
+
+Data Output: 
 
 ![Question Data 8](Images/question8_data.PNG)
 
