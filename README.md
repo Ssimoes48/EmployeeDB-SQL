@@ -12,9 +12,11 @@
 * [Resources](#resources)
 * [Contact](#contact)
 
+
 ## About the Project
 
 As a recent employee at Pewlett Hackard, I have been tasked to organize and analyze data for employees at the corporation in the 1980s and 1990s. I have used a database mapping tool to visualize all of the data and then PostgreSQL to analyze this information. Below you will see a step by step guide to how the information was modeled and reviewed. 
+
 
 ## Data Modeling
 
@@ -71,7 +73,6 @@ Salary Table: includes `Employee_ID` and `Salary` amount
 By mapping my data tables in the mapping tool, I created `CONSTRAINTS` ,  `PRIMARY KEYS` , and `FOREIGN KEYS` . These criteria help my data tables interact when combining information into one `queries` . 
 
 ![Table Constraints](Images/constraints.PNG)
-
 
 
 ## Data Analysis
@@ -159,10 +160,36 @@ Data Output:
 
 ## Salary Analysis
 
-BONUS 
+To further analyze the employee data, I imported the database into `Jupyter Notebook`. I had to use the `create_engine` and `engine.connect( )` commands to import the data. 
+
+Once it was linked to notebook, I was able to use code I created in `PostgreSQL` to view the data in a table. When importing the code, I use 3 sets of ` “ “ ` to organize my code on separate lines (the way it is displayed in `pgAdmin` . 
+
+![Bonus code](Images/bonus_jn.PNG)
+
+![Bonus db](Images/bonus_df.PNG)
+
+I then viewed the Salary data in a `histogram` . I used the code `data.hist(‘salary)` to display the chart. 
+
+![Histogram](Images/hist.salery.PNG)
+
+To further display the data in a bar chart, I use a `groupby` function to group the data by Job Title and then used `.mean( )` to calculate the average salary by Job Title. I used  `.plot(kind = bar)` to create the bar chart. 
+
+![Bar chart](Images/salary_bar.PNG)
+ 
 
 ## Conclusion
 
+After reviewing the data in the bar chart format, it was clear there was something strange about the information. The Bar chart shows that Sr level employees were making the same salaries as manager level and very close salaries to assistant level. 
+
+When I brought this up to my new manager, he told me to do a search in the database for my Employee ID – 499942. 
+
+I did this by using a `WHERE` clause to find the `employee_id = 499942` . The data showed below :
+
+![my_id](Images/my_id_df.PNG)
+
+Very Funny…. 
+
+![april fools](Images/april_fools.png)
 
 ## Resources
 

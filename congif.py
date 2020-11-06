@@ -1,1 +1,1 @@
-password = "isiscat"
+password = "postgres"
