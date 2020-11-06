@@ -199,3 +199,4 @@ Link to [SQL Employee Database](https://github.com/Ssimoes48/SQL_Challenge/blob/
 
 ## Contact
 Sara Simoes
+
