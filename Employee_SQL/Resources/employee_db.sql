@@ -84,6 +84,7 @@ FROM Employee e
 INNER JOIN Salaries s
 ON (e.Employee_ID = s.Employee_ID);
 
+
 --Question 2
 SELECT First_Name, Last_Name, Hire_Date
 FROM Employee
@@ -133,6 +134,23 @@ SELECT Last_Name, COUNT(Last_Name) AS "Frequency"
 FROM Employee
 GROUP BY Last_Name
 ORDER BY Last_Name DESC
+
+--Bonus Jupyter Notebook Code
+SELECT e.Employee_ID, t.title, s.Salary 
+FROM Employee e
+INNER JOIN Salaries s
+ON (e.Employee_ID = s.Employee_ID)
+INNER JOIN Job_Title t
+ON (e.Employee_title_id = t.title_id)
+
+--Look up Employee_ID 499942
+SELECT e.Employee_ID, e.Last_Name, e.First_Name, s.Salary 
+FROM Employee e
+INNER JOIN Salaries s
+ON (e.Employee_ID = s.Employee_ID)
+WHERE (e.Employee_ID = 499942)
+
+
 
 
 
