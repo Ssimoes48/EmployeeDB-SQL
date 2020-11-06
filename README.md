@@ -128,7 +128,7 @@ Data Output:
 
 6. List all employees in the Sales department, including their employee number, last name, first name, and department name.
 
-Query: To show this view, I had to use `INNER JOIN` 3 tables- `Employee` , `Employee_Department` , and `Department`. This is how the view is able to display the Employee information as well as the `Department_Name` . I also used a `WHERE` statement to only show Employee’s who are in the `Sales` department. 
+Query: To show this view, I had to use `INNER JOIN` 3 tables- `Employee` , `Employee_Department` , and `Department`. This is how the view is able to display the Employee information as well as the `Department_Name` . I also used a `WHERE` clause to only show Employee’s who are in the `Sales` department. 
 
 ![Question 6](Images/question6.PNG)
 
