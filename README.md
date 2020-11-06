@@ -170,7 +170,7 @@ Once it was linked to notebook, I was able to use code I created in `PostgreSQL`
 
 I then viewed the Salary data in a `histogram` . I used the code `data.hist(‘salary)` to display the chart. 
 
-![Histogram](Images/hist.salery.PNG)
+![Histogram](Images/hist_salary.PNG)
 
 To further display the data in a bar chart, I use a `groupby` function to group the data by Job Title and then used `.mean( )` to calculate the average salary by Job Title. I used  `.plot(kind = bar)` to create the bar chart. 
 
