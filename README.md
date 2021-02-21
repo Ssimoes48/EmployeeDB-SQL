@@ -1,4 +1,4 @@
-# SQL Challenge
+# Employee Database- SQL
 
 ![SQL](Images/sql.png)
 
